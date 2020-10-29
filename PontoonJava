@@ -1,0 +1,65 @@
+package pontoonP;
+
+public class pontoonC{
+
+	static int startClick = 0;
+	
+	public static String startGame() {
+			
+			String gen1 = ("First card is: " + Math.random());
+			String gen2 = ("Second card is: " + Math.random());
+			String add = gen1 + gen2;
+			
+			System.out.println("First number is " + gen1);
+			System.out.println("Second number is " + gen2);
+			System.out.println("Together thats " + add);
+		
+		System.out.println("Enter Driver name ");
+		
+		return(add);
+		
+	}
+
+static int hitClick = 1;
+int hitTotal;
+
+	public static String hitButton() {
+		
+		if (hitClick < 6) {
+			int hitAdd = Math.random());
+			int hitTotal = hitAdd + add;
+			
+			System.out.println(hitTotal);
+			
+			if(hitTotal > 21) {
+				System.out.println("You Went over 21, You lose!");
+			}
+			
+			if(hitTotal == 21) {
+				System.out.println("You got 21, You win!");
+			}
+			
+		hitClick = (hitClick + 1);
+		
+		} else {
+			System.out.println("You can only take 5 cards!");
+		}
+	}
+
+		public static String stickButton() {
+			int result;
+			
+			if(hitTotal > 21) {
+				System.out.println("You have already gone over 21!");
+			} else if (hitTotal > 18) {
+				System.out.println("You win!");
+			} else if (hitTotal == 18) {
+				System.out.println("You tied!");
+			} else {
+				System.out.println("You lost!");
+			}
+
+		}
+
+
+}
